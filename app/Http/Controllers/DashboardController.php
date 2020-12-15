@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\PostLiked;
 
 class DashboardController extends Controller
 {
