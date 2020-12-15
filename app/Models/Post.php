@@ -22,6 +22,11 @@ class Post extends Model
         return $this->likes->contains('user_id',$user->id); //contains laravel collection obj which we can check what contains in a given time
     }
 
+    public function ownedBy(User $user)
+    {
+        return $user->id===$this->user_id; //match the user ID with the post user ID
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
