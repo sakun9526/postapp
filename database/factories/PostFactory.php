@@ -22,7 +22,16 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'body'=>$this->faker->sentence(10) //sentence of 10 words
         ];
     }
 }
+
+/*
+    ==============================================================================
+            GENERATE FAKE DATA FOR THE DATABASE 
+    ## in CMD 
+    php artisan tinker
+    
+    App\Models\Post::factory()->times(number of records needed)->create(['user_id'=>2]);
+*/
